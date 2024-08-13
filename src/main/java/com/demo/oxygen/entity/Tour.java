@@ -3,7 +3,7 @@ package com.demo.oxygen.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class TourEntity {
+public class Tour {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -20,7 +20,7 @@ public class TourEntity {
     @Column
     private String duration;
 
-    public TourEntity( String title, String description, Integer price, String duration) {
+    public Tour( String title, String description, Integer price, String duration) {
         this.title = title;
         this.description = description;
         this.price = price;
