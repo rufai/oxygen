@@ -3,6 +3,7 @@ package com.demo.oxygen.service;
 import com.demo.oxygen.entity.TourPackage;
 import com.demo.oxygen.repository.TourPackageResposity;
 import com.demo.oxygen.repository.TourRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,10 +13,12 @@ import java.util.List;
 @Service
 public class TourPackageService {
     private TourRepository tourRepository;
+
+    @Autowired
     private TourPackageResposity tourPackageResposity;
 
-    public TourPackageService( TourRepository tourRepository, TourPackageResposity tourPackageRepo) {
-        this.tourRepository = tourRepository;
+
+    public TourPackageService(  TourPackageResposity tourPackageRepo) {
         this.tourPackageResposity = tourPackageRepo;
     }
 

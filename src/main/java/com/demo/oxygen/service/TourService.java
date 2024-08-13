@@ -18,12 +18,16 @@ public class TourService {
         this.tourRepository = tourRepository;
     }
 
-    public Tour createTour(  String title, String description, Integer price, String duration ){
-        return (Tour) tourRepository.save(new Tour(title, description, price, duration));
+    public Tour createTour(  String title, String description, Integer price ){
+        return (Tour) tourRepository.save(new Tour(title, description, price));
     }
 
     public long total(){
         return tourRepository.count();
+    }
+
+    public List<Tour> getAllTour(){
+        return tourRepository.findAll();
     }
 
 

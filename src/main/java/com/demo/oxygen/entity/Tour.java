@@ -17,20 +17,21 @@ public class Tour {
     @Column
     private Integer price;
 
-    @Column
-    private String duration;
+//    @Column
+//    private String duration;
 
-    public Tour( String title, String description, Integer price, String duration) {
+    public Tour( String title, String description, Integer price) {
         this.title = title;
         this.description = description;
         this.price = price;
-        this.duration = duration;
+//        this.duration = duration;
 
     }
 
-    public TourEntity() {
+    public Tour() {
 
     }
+
 
     public Integer getId() {
         return id;
@@ -60,13 +61,6 @@ public class Tour {
         return price;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
 
     @Override
     public String toString() {
@@ -75,7 +69,6 @@ public class Tour {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", duration='" + duration + '\'' +
                 '}';
     }
 }
